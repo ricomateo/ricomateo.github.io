@@ -1,0 +1,47 @@
+body {
+  font-family: "Courier New", monospace;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 10fr;
+}
+
+.header {
+  display: grid;
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  grid-template-columns: 4fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+
+  background-color: #222;
+  text-align: center;
+}
+
+.header div {
+  padding: 10px;
+}
+
+.header div:hover {
+  background-color: #333;
+}
+
+.about-me-button {
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+}
+
+.about-me-button:hover {
+  background-color: #333;
+}
+
+.contact-button {
+  grid-row: 1 / 2;
+  grid-column: 3 / 4;
+}
+
+.projects-button {
+  grid-row: 1 / 2;
+  grid-column: 4 / 5;
+}
