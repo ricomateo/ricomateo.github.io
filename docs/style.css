@@ -1,11 +1,14 @@
 body {
   font-family: "Courier New", monospace;
+  color: white;
+  background-color: #222;
 }
 
 .container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 10fr;
+  grid-template-rows: 1fr 0.5fr 10fr;
+  margin: 0px;
 }
 
 .header {
@@ -14,13 +17,14 @@ body {
   grid-column: 1 / 2;
   grid-template-columns: 4fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-
+  margin: -10px;
+  margin-bottom: 0px;
   background-color: #222;
   text-align: center;
 }
 
 .header div {
-  padding: 10px;
+  padding: 20px;
 }
 
 .header div:hover {
@@ -44,4 +48,78 @@ body {
 .projects-button {
   grid-row: 1 / 2;
   grid-column: 4 / 5;
+}
+
+
+
+.profile-photo {
+  border-radius: 200%;
+  height: 200px;
+  width: auto;
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+}
+
+.subheader {
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+  grid-template-rows: 1fr;
+  background-color: rgb(41, 41, 41);
+  margin: -5px;
+}
+
+.tab {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  background-color: #1d1d1d;
+  /*display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-rows: 1fr;
+  */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.filename {
+  font-family: sans-serif;
+  font-size: 12px;
+}
+
+.language {
+  color: rgb(20, 177, 230);
+  font-family: sans-serif;
+  font-weight: bold;
+  
+}
+
+.cross {
+  color: white;
+  font-size: 20px;
+}
+
+.cross:hover {
+  background-color: #333;
+}
+
+.blue {
+  color: rgb(117, 177, 245);
+}
+
+.green {
+  color: rgb(174, 212, 129);
+}
+
+.purple {
+  color: rgb(235, 101, 235)
+}
+
+.orange {
+  color: rgb(252, 163, 122);
+}
+
+.comment {
+  /**/
+  color: rgb(99, 128, 99);
 }
