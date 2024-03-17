@@ -6,14 +6,14 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 0.5fr 10fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 0.5fr 15fr 0.25fr;
   margin: 0px;
 }
 
 .header {
   display: grid;
-  grid-row: 1 / 2;
+  grid-row: 1 / 3;
   grid-column: 1 / 2;
   grid-template-columns: 4fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
@@ -66,6 +66,8 @@ body {
   grid-template-rows: 1fr;
   background-color: rgb(41, 41, 41);
   margin: -5px;
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
 }
 
 .tab {
@@ -80,6 +82,11 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 10px;
+}
+
+.code {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
 }
 
 .filename {
@@ -119,7 +126,45 @@ body {
   color: rgb(252, 163, 122);
 }
 
+.line-number {
+  color: grey;
+}
+
 .comment {
   /**/
   color: rgb(99, 128, 99);
+}
+
+.footer {
+  font-family: 'Courier New';
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  font-size: 14px;
+  grid-column: 1 / 2;
+  grid-row: 4 / 5;
+}
+
+.compile-button {
+  background-color: rgb(0, 122, 204);
+  border: 0;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+  font-size: 15px;
+  font-family: 'Courier New';
+}
+
+.compile-button:hover {
+  background-color: rgb(0, 101, 168);;
+}
+
+.footer div {
+  padding: 3px;
+}
+
+.console {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+  background-color: black;
 }
