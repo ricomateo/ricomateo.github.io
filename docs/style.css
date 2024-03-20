@@ -10,7 +10,7 @@ body {
 .container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 18fr 12fr 12fr;
+  grid-template-rows: 1fr 12fr 12fr 12fr;
   margin: 0px;
 }
 
@@ -217,8 +217,4 @@ body {
   
   /*border: 1px solid red;
   */
-}
-
-body div {
-  border: 1px solid red;
 }
