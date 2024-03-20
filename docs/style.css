@@ -1,6 +1,6 @@
 body {
   font-family: "Courier New";
-  /*font-family: Poppins, sans-serif;
+  /*font-family: "IBM Plex Mono", monospace;
   */
   color: white;
   background-color: #1a1919;
@@ -70,11 +70,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 .presentation {
   display: flex;
   gap: clamp(20px, 80px, 80px);
+  margin-top: -6em;
 }
 
 .name {
@@ -135,12 +137,17 @@ body {
 }
 
 .cv {
-  background-color: rgb(40, 44, 48);
+  /*background-color: rgb(40, 44, 48);
+  */
   font-size: 1.5em;
   color: white;
   padding: 10px;
   font-weight: bold;
   margin-top: 60px;
+  border: 2px solid white;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 5px;
 }
 
 .cv:hover {

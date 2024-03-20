@@ -59,4 +59,53 @@ function setUpButtons() {
     });
 }
 
+function replace(string, index, replacement) {
+    return string.substring(0, index) + replacement + string.substring(index + replacement.length);
+}
+
+function setUpName() {
+    let name = document.querySelector('.title');
+    name.textContent = "                   ";
+    let text = "Software developer";
+
+    let i = 0;
+    let string = name.textContent;
+    let writing = true;
+    const interval = setInterval(() => {
+        string = replace(string, i, text[i]);
+        string = replace(string, i + 1, "█");
+        name.textContent = string;
+        i++;
+        if (i === text.length) {
+            clearInterval(interval);
+            writing = false;
+        }
+        titilate(writing);
+    }, 150);
+    
+}
+
+function titilate(writing) {
+    if (writing) {
+        console.log("still writing");
+        return;
+    }
+    console.log("no more writing");
+    let name = document.querySelector('.title');
+    let j = 0;
+    const interval2 = setInterval(() => {
+        if (j % 2 == 0) {
+            name.textContent = "Software developer";
+        } else {
+            name.textContent = "Software developer█";
+        }
+        j++;
+        if (j === -1) {
+            clearInterval(interval2);
+        }
+    }, 500);
+}
+
+
+setUpName();
 setUpButtons();
