@@ -44,18 +44,27 @@ function setUpRunning() {
 // y se le saca el selected al boton que estaba selected antes.
 function setUpButtons() {
     let buttons = document.querySelectorAll('.button');
+    let aboutMeSection = document.querySelector('.about-me-container');
+    let projectsSection = document.querySelector('.projects');
+    let homeSection = document.querySelector('.presentation');
     console.log("buttons = ", buttons);
     buttons.forEach((button) => {
         button.addEventListener('click', () => {
             console.log("clickeaste en ", button);
-            if (button.classList.contains('selected')) return;
             let previouslySelected = document.querySelector('.selected');
             if (previouslySelected != null) {
                 previouslySelected.classList.remove('selected');
             }
             button.classList.add('selected');
+
+            if (button.classList.contains('about-me-button')) {
+                scrollToSection(aboutMeSection);
+            } else if (button.classList.contains('projects-button')) {
+                scrollToSection(projectsSection);
+            } else if (button.classList.contains('home')) {
+                scrollToSection(homeSection);
+            }
         })
-        
     });
 }
 
@@ -121,6 +130,14 @@ function delay() {
 
 }
 
+function scrollToSection(section) {
+    section.scrollIntoView({ behavior: "smooth", block: "center" });   
+}
+
+function setScrollToAbout() {
+
+}
 //delay();
+setScrollToAbout();
 setUpName();
 setUpButtons();

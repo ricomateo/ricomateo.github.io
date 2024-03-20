@@ -10,12 +10,15 @@ body {
 .container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 12fr 8fr 12fr;
+  grid-template-rows: 1fr 18fr 12fr 12fr;
   margin: 0px;
 }
 
 .header {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -124,6 +127,7 @@ body {
 }
 
 .about-me-container {
+  padding: 4em;
   grid-row: 3 / 4;
   display: flex;
   align-items: center;
@@ -137,8 +141,7 @@ body {
 }
 
 .cv {
-  /*background-color: rgb(40, 44, 48);
-  */
+
   font-size: 1.5em;
   color: white;
   padding: 10px;
@@ -214,4 +217,8 @@ body {
   
   /*border: 1px solid red;
   */
+}
+
+body div {
+  border: 1px solid red;
 }
