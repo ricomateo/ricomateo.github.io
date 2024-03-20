@@ -106,6 +106,21 @@ function titilate(writing) {
     }, 500);
 }
 
+function delay() {
+    let container = document.querySelector('.container');
+    let body = document.querySelector('body');
+    body.removeChild(container);
+    let j = 0;
+    const interval = setInterval(() => {
+        if (j === 1) {
+            clearInterval(interval);
+            body.appendChild(container);
+        }
+        j++;
+    }, 2000);
 
+}
+
+//delay();
 setUpName();
 setUpButtons();
