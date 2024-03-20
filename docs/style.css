@@ -10,7 +10,7 @@ body {
 .container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 8fr 12fr 12fr;
+  grid-template-rows: 1fr 10fr 12fr 12fr;
   margin: 0px;
 }
 
@@ -236,4 +236,9 @@ i {
 video {
   border-radius: 5px;
   border: 2px solid white;
+}
+
+
+a {
+  text-decoration: none;
 }
