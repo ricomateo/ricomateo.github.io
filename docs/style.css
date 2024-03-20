@@ -103,6 +103,10 @@ body {
   gap: 20px;
 }
 
+
+i {
+  font-size: 5.25em;
+}
 .info {
   display: flex;
   flex-direction: column;
@@ -131,7 +135,12 @@ body {
   grid-row: 3 / 4;
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
+}
+
+.about-me-section {
+  width: 70%;
 }
 
 .tech-stack {
@@ -224,4 +233,3 @@ video {
   border-radius: 5px;
   border: 2px solid white;
 }
-
