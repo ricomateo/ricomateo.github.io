@@ -11,7 +11,7 @@ body {
 .container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 10fr 12fr 12fr;
+  grid-template-rows: 1fr 10fr 12fr 12fr 12fr;
   margin: 0px;
 }
 
@@ -41,10 +41,22 @@ body {
   margin-right: 20px;
 }
 
+@keyframes buttonColorChange {
+  0% {
+    background-color: transparent; /* Start transparent */
+  }
+  100% {
+    background-color: #ddd; /* End with initial color */
+  }
+}
+
 .header div.button:hover {
   color: #333;
   background-color: white;
   cursor: pointer;
+  /*background-image: linear-gradient(to top, transparent 0%, #333 100%); /* Gradient for hover */
+  animation: buttonColorChange 0.2s ease-in-out; /* Animation name, duration, timing */
+
 }
 
 
@@ -79,7 +91,7 @@ body {
 
 .presentation {
   display: flex;
-  gap: clamp(20px, 80px, 80px);
+  gap: clamp(2px, 80px, 80px);
   margin-top: -6em;
 }
 
@@ -242,4 +254,108 @@ video {
 
 a {
   text-decoration: none;
+  color: white;
+}
+
+.contact-container {
+  grid-row: 5 / 6;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+}
+
+.contact {
+  font-size: 3em;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact > div {
+  font-size: 0.5em;
+  font-weight: 400;
+}
+
+.mail, .linkedin {
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+}
+
+.mail svg {
+  height: 70px;
+  width: auto;
+  margin: 5px;
+  padding: -5px;
+
+}
+
+.linkedin svg {
+  height: 70px;
+  width: auto;
+  margin: 5px;
+}
+
+.linkedin {
+  margin-right: 3em;
+}
+
+.linkedin svg:hover {
+  cursor: pointer;
+
+  color: rgb(57, 63, 68);
+  border: 2px solid white;
+  background-color: white;
+  border-radius: 8px;
+  
+}
+
+.mail:hover {
+  cursor: pointer;
+}
+
+.actual-mail {
+  font-size: 0.8em;
+  font-weight: 200;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.actual-mail div {
+  margin-top: -5px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.medium {
+  font-size: 1.2em;
+}
+
+.light {
+  font-weight: 300;
+}
+
+.small {
+  font-size: 0.7em;
+}
+
+.social-media {
+  display: flex;
+  width: 25em;
+  justify-content: space-around;
+  align-items: center;
+}
+/*
+body div {
+  border: 1px solid red;
 }
