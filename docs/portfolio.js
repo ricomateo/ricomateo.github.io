@@ -1,21 +1,4 @@
-function setUpCompilation() {
-    let button = document.querySelector('.compile-button');
-    button.addEventListener('click', () => {
-        let terminal = document.querySelector('.console-content');
-        let span = document.createElement('span');
-        let p = document.createElement('p');
-        span.classList.add("comment");
-        span.textContent = '/home/portfolio';
-        p.appendChild(span);
-        p.append(":~$ gcc portfolio.c -o portfolio");
-        terminal.appendChild(p);
-        button.textContent = "Compiled!";
-        button.style.backgroundColor = "green";
-        let runButton = document.querySelector('.run-button');
-        runButton.style.backgroundColor = "rgb(0, 122, 204)";
-        runButton.addEventListener('click', setUpRunning);
-    })
-}
+
 
 function sleep(ms) {
     setTimeout(() => {}, ms);
@@ -47,6 +30,7 @@ function setUpButtons() {
     let aboutMeSection = document.querySelector('.about-me-container');
     let projectsSection = document.querySelector('.projects');
     let homeSection = document.querySelector('.presentation');
+    let contactSection = document.querySelector('.contact');
     console.log("buttons = ", buttons);
     buttons.forEach((button) => {
         button.addEventListener('click', () => {
@@ -63,6 +47,8 @@ function setUpButtons() {
                 scrollToSection(projectsSection);
             } else if (button.classList.contains('home')) {
                 scrollToSection(homeSection);
+            } else if (button.classList.contains('contact-button')) {
+                scrollToSection(contactSection);
             }
         })
     });
@@ -137,7 +123,7 @@ function scrollToSection(section) {
 function setScrollToAbout() {
 
 }
-//delay();
+
 setScrollToAbout();
 setUpName();
 setUpButtons();
