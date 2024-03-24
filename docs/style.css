@@ -50,13 +50,19 @@ body {
   }
 }
 
-.header div.button:hover {
-  color: #333;
-  background-color: white;
-  cursor: pointer;
-  /*background-image: linear-gradient(to top, transparent 0%, #333 100%); /* Gradient for hover */
-  animation: buttonColorChange 0.2s ease-in-out; /* Animation name, duration, timing */
 
+
+.header div {
+  background: linear-gradient(rgb(40, 44, 48), rgb(40, 44, 48) 50%,white 50%, white);
+  background-size: 100% 200%;
+  /*trasition effect for background*/
+  transition: background 0.2s;
+}
+
+.header div.button:hover {
+  background-position: 100% 100%;
+  color: #333;
+  cursor: pointer;
 }
 
 
@@ -177,6 +183,11 @@ i {
   padding-left: 20px;
   padding-right: 20px;
   border-radius: 5px;
+
+  background: linear-gradient(rgb(57, 63, 68), rgb(57, 63, 68) 50%,white 50%, white);
+  background-size: 100% 200%;
+  /*trasition effect for background*/
+  transition: background 0.2s;
 }
 
 .cv:hover {
@@ -185,6 +196,7 @@ i {
   cursor: pointer;
   outline: 2px solid white;
   border: 2px solid #333;
+  background-position: 100% 100%;
 }
 
 .projects-container {
