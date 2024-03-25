@@ -388,27 +388,87 @@ body div {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   width: 40em;
-}
-
-.worms-description {
-  width: 30em;
 }
 
 .flex {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 0;
+  text-align: left;
+}
+
+.flex div {
+  text-align: left;
+  width: 100%;
 }
 
 .flex-column {
   flex-direction: column;
+  gap: 20px;
 }
 
-.worms video {
-  height: clamp(100px, 280px, 280px);
+video {
+  height: 280px;
   width: auto;
 }
 
+.worm {
+  grid-row: 2 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.medium-wide {
+  min-width: 40em;
+}
+
+.big-font {
+  font-size: 3em;
+}
+
+.medium-font {
+  font-size: 1.5em;
+}
+.worm div {
+  text-align: left;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.repo-button {
+  text-align: center;
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 4px;
+  background: linear-gradient(
+    rgb(57, 63, 68),
+    rgb(57, 63, 68) 50%,
+    white 50%,
+    white
+  );
+  background-size: 100% 200%;
+  /*trasition effect for background*/
+  transition: background 0.2s;
+}
+
+.repo-button:hover {
+  background-color: white;
+  color: #333;
+  cursor: pointer;
+  outline: 2px solid white;
+  border: 2px solid #333;
+  background-position: 100% 100%;
+}
 /*
 div {
   border: 1px solid red;
