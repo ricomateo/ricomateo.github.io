@@ -1,0 +1,413 @@
+body {
+  font-family: "Courier New";
+  /*font-family: "IBM Plex Mono", monospace;
+  */
+  font-family: "IBM Plex Mono", monospace;
+  color: white;
+  background-color: #1a1919;
+  background-color: rgb(57, 63, 68);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 10fr 12fr 12fr 12fr;
+  margin: 0px;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  margin: -10px;
+  margin-bottom: 0px;
+  text-align: center;
+  font-weight: bold;
+
+  background-color: rgb(40, 44, 48);
+}
+
+.header div.button {
+  padding: 3px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+@keyframes buttonColorChange {
+  0% {
+    background-color: transparent; /* Start transparent */
+  }
+  100% {
+    background-color: #ddd; /* End with initial color */
+  }
+}
+
+.header div {
+  background: linear-gradient(
+    rgb(40, 44, 48),
+    rgb(40, 44, 48) 50%,
+    white 50%,
+    white
+  );
+  background-size: 100% 200%;
+  /*trasition effect for background*/
+  transition: background 0.2s;
+}
+
+.header div.button:hover {
+  background-position: 100% 100%;
+  color: #333;
+  cursor: pointer;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.header div {
+  text-align: center;
+}
+
+.photo img {
+  height: 200px;
+  width: auto;
+  border-radius: 200px;
+  border: 5px solid rgb(150, 164, 177);
+  outline: none;
+}
+
+.presentation-container {
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.presentation {
+  display: flex;
+  gap: clamp(2px, 80px, 80px);
+  margin-top: -6em;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 5em;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.tech-container {
+  background-color: rgb(39, 45, 51);
+  display: flex;
+  justify-content: center;
+}
+
+.languages {
+  display: flex;
+  gap: 20px;
+}
+
+i {
+  font-size: 4em;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.languages img {
+  height: 50px;
+  width: auto;
+}
+
+.selected {
+  display: inline-block;
+  border-bottom: 2px solid white;
+}
+
+.about-me {
+  font-size: 3em;
+  font-weight: bold;
+  text-align: left;
+}
+
+.about-me-container {
+  padding: 4em;
+  grid-row: 3 / 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-me-section {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.tech-stack {
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.cv {
+  font-size: 1.5em;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  margin-top: 60px;
+  border: 2px solid white;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 5px;
+
+  background: linear-gradient(
+    rgb(57, 63, 68),
+    rgb(57, 63, 68) 50%,
+    white 50%,
+    white
+  );
+  background-size: 100% 200%;
+  /*trasition effect for background*/
+  transition: background 0.2s;
+}
+
+.cv:hover {
+  background-color: white;
+  color: #333;
+  cursor: pointer;
+  outline: 2px solid white;
+  border: 2px solid #333;
+  background-position: 100% 100%;
+}
+
+.projects-container {
+  grid-row: 4 / 5;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.projects {
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 20px;
+  gap: 10px;
+  margin-top: 3em;
+  width: 35em;
+}
+
+.project:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #333;
+  outline: 2px solid white;
+  border: 2px solid #333;
+}
+
+.project-name {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.tags {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.tags div {
+  font-size: 0.8em;
+  border: 1px solid white;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.project:hover div {
+  border-color: #333;
+}
+
+.project:hover video {
+  border: 3px solid white;
+  outline: 2px solid #333;
+}
+
+video {
+  border-radius: 5px;
+  border: 2px solid white;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.contact-container {
+  grid-row: 5 / 6;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+}
+
+.contact {
+  font-size: 3em;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact > div {
+  font-size: 0.5em;
+  font-weight: 400;
+}
+
+.mail,
+.linkedin {
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+}
+
+.mail svg {
+  height: 70px;
+  width: auto;
+  margin: 5px;
+  padding: -5px;
+}
+
+.linkedin svg {
+  height: 70px;
+  width: auto;
+  margin: 5px;
+}
+
+.linkedin {
+  margin-right: 3em;
+}
+
+.linkedin svg:hover {
+  cursor: pointer;
+
+  color: rgb(57, 63, 68);
+  border: 2px solid white;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.mail:hover {
+  cursor: pointer;
+}
+
+.actual-mail {
+  font-size: 0.8em;
+  font-weight: 200;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.actual-mail div {
+  margin-top: -5px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.medium {
+  font-size: 1.2em;
+}
+
+.light {
+  font-weight: 300;
+}
+
+.small {
+  font-size: 0.7em;
+}
+
+.social-media {
+  display: flex;
+  width: 25em;
+  justify-content: space-around;
+  align-items: center;
+}
+/*
+body div {
+  border: 1px solid red;
+}
+
+
+/**************************  WORMS  ***********************/
+
+.worms-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 10fr 12fr 12fr 12fr;
+  margin: 0px;
+}
+
+.worms {
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40em;
+}
+
+.worms-description {
+  width: 30em;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.worms video {
+  height: 280px;
+  width: auto;
+}
+
+div {
+  border: 1px solid red;
+}
