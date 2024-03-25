@@ -222,7 +222,7 @@ i {
   padding: 20px;
   gap: 10px;
   margin-top: 3em;
-  width: 35em;
+  width: clamp(10em, 30em, 30em);
 }
 
 .project:hover {
@@ -404,10 +404,12 @@ body div {
 }
 
 .worms video {
-  height: 280px;
+  height: clamp(100px, 280px, 280px);
   width: auto;
 }
 
+
+/*
 div {
   border: 1px solid red;
 }
