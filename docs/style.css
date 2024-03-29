@@ -226,8 +226,12 @@ i {
   width: clamp(10em, 30em, 30em);
 }
 
+* {  box-sizing: border-box;}
+
 .project:hover {
+  
   cursor: pointer;
+  margin-top: 3em;
   background-color: white;
   color: #333;
   outline: 2px solid white;
@@ -417,7 +421,7 @@ video {
 }
 
 .narrow-video {
-  width: 800px;
+  width: 600px;
   height: auto;
 }
 
