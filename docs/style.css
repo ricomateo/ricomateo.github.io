@@ -416,6 +416,11 @@ video {
   width: auto;
 }
 
+.narrow-video {
+  width: 800px;
+  height: auto;
+}
+
 .worm {
   grid-row: 2 / 3;
   display: flex;
