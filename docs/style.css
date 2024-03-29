@@ -224,18 +224,27 @@ i {
   gap: 10px;
   margin-top: 3em;
   width: clamp(10em, 30em, 30em);
+
+  background: linear-gradient(
+    rgb(57, 63, 68),
+    rgb(57, 63, 68) 50%,
+    white 50%,
+    white
+  );
+  background-size: 100% 200%;
+  /*trasition effect for background*/
+  transition: background 0.1s;
 }
 
 * {  box-sizing: border-box;}
 
 .project:hover {
-  
-  cursor: pointer;
-  margin-top: 3em;
   background-color: white;
   color: #333;
+  cursor: pointer;
   outline: 2px solid white;
   border: 2px solid #333;
+  background-position: 100% 100%;
 }
 
 .project-name {
