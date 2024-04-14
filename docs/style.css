@@ -11,7 +11,7 @@ body {
 .container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 10fr 12fr 12fr 12fr;
+  grid-template-rows: 1fr 15fr 15fr 15fr 20fr;
   margin: 0px;
 }
 
@@ -160,6 +160,7 @@ i {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding-bottom: 8em;
 }
 
 .about-me-section {
@@ -283,6 +284,11 @@ i {
 video {
   border-radius: 5px;
   border: 2px solid white;
+}
+
+.project video {
+  width: 435px;
+  height: auto;
 }
 
 a {
