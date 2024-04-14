@@ -56,8 +56,7 @@
           </svg>
         </div>
       </div>
-
-      <div class="presentation-container">
+      <div id="home" class="presentation-container">
         <div class="presentation">
           <div class="info">
             <div class="medium-font">(Work in progress ⚠️)</div>
@@ -76,7 +75,6 @@
           </div>
         </div>
       </div>
-
       <div class="about-me-container">
         <div class="about-me-section">
           <div class="about-me">About me</div>
@@ -103,26 +101,25 @@
 
       <div class="projects-container">
         <div class="projects">Projects</div>
-        <a href="worms.html">
-          <div class="project">
-            <div class="project-name">Worms</div>
-            <div class="project-description">
-              Online videogame developed as a coursework project. The project is
-              a clone of the classic Worms game.
-            </div>
-            <video autoplay loop>
-              <source src="wormsvideo.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
 
-            <div class="tags">
-              <div>C++</div>
-              <div>TCP/IP</div>
-              <div>Game development</div>
-              <div>Networking</div>
-            </div>
+        <div class="project">
+          <div class="project-name">Worms</div>
+          <div class="project-description">
+            Online videogame developed as a coursework project. The project is a
+            clone of the classic Worms game.
           </div>
-        </a>
+          <video autoplay loop>
+            <source src="wormsvideo.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+
+          <div class="tags">
+            <div>C++</div>
+            <div>TCP/IP</div>
+            <div>Game development</div>
+            <div>Networking</div>
+          </div>
+        </div>
       </div>
 
       <div class="contact-container">
@@ -168,6 +165,52 @@
               </a>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="worm hidden">
+        <div class="flex flex-column medium-wide">
+          <div class="project-name big-font text-center">Worms</div>
+          <div class="worms-description">
+            The game was developed as a project coursework. For a month and a
+            half, 2 friends and I had to implement the whole game
+            <strong>from scratch</strong>, which included the client, server,
+            communication protocol, game logic and physics simulation. <br />
+          </div>
+          <video autoplay loop>
+            <source src="wormsbanana.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+
+          <div>
+            We developed the whole project in C++, using SDL2pp for the user
+            interface, TCP/IP sockets for the networking protocol, and Box2D to
+            simulate the physics.
+          </div>
+          <video autoplay loop>
+            <source
+              src="wormsdinamita.mp4"
+              type="video/mp4"
+              class="narrow-video"
+            />
+            Your browser does not support the video tag.
+          </video>
+          <div class="medium-font bold">Features</div>
+          <div class="text-left">
+            The game has several features, including
+            <ul>
+              <li>Create multiple matches</li>
+              <li>Multiplayer matches (up to 4 players)</li>
+              <li>
+                Several weapons (bazooka, grenade, dynamite and...
+                <strong>BANANA!</strong>)
+              </li>
+              <li>Choose between different maps</li>
+              <li>Cheats (infinite hp, infinite ammo, etc)</li>
+            </ul>
+          </div>
+          <a href="https://github.com/ricomateo/Worms" target="_blank">
+            <div class="repo-button">Checkout the repo</div>
+          </a>
         </div>
       </div>
     </div>
